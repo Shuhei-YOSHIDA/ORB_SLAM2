@@ -38,3 +38,14 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 add_library(DBoW2 SHARED ${SRCS_DBOW2} ${SRCS_DUTILS})
 target_link_libraries(DBoW2 ${OpenCV_LIBS})
 
+install(TARGETS DBoW2
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin)
+
+install (DIRECTORY DBoW2/
+  DESTINATION include/ORB_SLAM2/Thirdparty/DBoW2
+  FILES_MATCHING PATTERN "*.h")
+#install (DIRECTORY DUtils/
+#  DESTINATION include/DUtils
+#  FILES_MATCHING PATTERN "*.h")

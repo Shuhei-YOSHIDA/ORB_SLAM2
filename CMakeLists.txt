@@ -111,3 +111,10 @@ add_executable(mono_euroc
 Examples/Monocular/mono_euroc.cc)
 target_link_libraries(mono_euroc ${PROJECT_NAME})
 
+install(TARGETS ${PROJECT_NAME}
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin)
+install(DIRECTORY include/ DESTINATION include/${PROJECT_NAME})
+install(TARGETS mono_tum RUNTIME DESTINATION bin)
+
