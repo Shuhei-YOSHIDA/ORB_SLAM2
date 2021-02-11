@@ -178,15 +178,24 @@ install (TARGETS g2o
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin)
 
-install (DIRECTORY g2o/type/
-  DESTINATION include/ORB_SLAM2/Thirdparty/g2o/g2o/type
-  FILES_MATCHING PATTERN "*.h"
+install (DIRECTORY g2o/types/
+  DESTINATION include/ORB_SLAM2/Thirdparty/g2o/g2o/types
+  FILES_MATCHING
+  PATTERN "*.h"
+  PATTERN "*.hpp"
 )
 install (DIRECTORY g2o/core/
   DESTINATION include/ORB_SLAM2/Thirdparty/g2o/g2o/core
-  FILES_MATCHING PATTERN "*.h"
+  FILES_MATCHING
+  PATTERN "*.h"
+  PATTERN "*.hpp"
 )
 install (DIRECTORY g2o/stuff/
   DESTINATION include/ORB_SLAM2/Thirdparty/g2o/g2o/stuff
-  FILES_MATCHING PATTERN "*.h"
+  FILES_MATCHING
+  PATTERN "*.h"
+  PATTERN "*.hpp"
 )
+install (FILES config.h
+  DESTINATION include/ORB_SLAM2/Thirdparty/g2o
+) 

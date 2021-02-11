@@ -44,8 +44,8 @@ install(TARGETS DBoW2
   RUNTIME DESTINATION bin)
 
 install (DIRECTORY DBoW2/
-  DESTINATION include/ORB_SLAM2/Thirdparty/DBoW2
+  DESTINATION include/ORB_SLAM2/Thirdparty/DBoW2/DBoW2
   FILES_MATCHING PATTERN "*.h")
-#install (DIRECTORY DUtils/
-#  DESTINATION include/DUtils
-#  FILES_MATCHING PATTERN "*.h")
+install (DIRECTORY DUtils/
+	DESTINATION include/ORB_SLAM2/Thirdparty/DBoW2/DUtils
+  FILES_MATCHING PATTERN "*.h")
