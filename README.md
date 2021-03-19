@@ -1,4 +1,25 @@
 # ORB-SLAM2
+
+This repository is forked.
+
+## Install
+To install this ORB_SLAM2 into your `/usr/local`, after executing `build.sh`,
+```terminal
+$ cd ORB_SLAM2/build/
+$ make install
+$ cd ../../ORB_SLAM2/ThirdParty/g2o/build/
+$ make install
+$ cd ../../DBoW2/build
+$ make install
+```
+
+And write a path into your `.bashrc`.
+```sh
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib/ORB_SLAM2
+```
+
+----
+
 **Authors:** [Raul Mur-Artal](http://webdiis.unizar.es/~raulmur/), [Juan D. Tardos](http://webdiis.unizar.es/~jdtardos/), [J. M. M. Montiel](http://webdiis.unizar.es/~josemari/) and [Dorian Galvez-Lopez](http://doriangalvez.com/) ([DBoW2](https://github.com/dorian3d/DBoW2))
 
 **13 Jan 2017**: OpenCV 3 and Eigen 3.3 are now supported.
